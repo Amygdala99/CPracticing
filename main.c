@@ -1,6 +1,216 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
+void main (void) {
+int a, b, c, sum;
+scanf("%d", &a);
+scanf("%d", &b);
+scanf("%d", &c);
+sum = a + b + c;
+printf ("sum is %d", sum);
+return;
+}
+*/
+/*--------------------------------------------------------*/
+/*
+int main(void) {
+int i, j;
+int sum ;
+i = 5 ;
+j = 6 ;
+sum = i + j ;
+printf ("sum: %d\n", sum);
+return 0;
+}
+*/
+/*-------------------------------------------------------*/
+/*
+void display_square(){
+printf("****\n");
+printf("*  *\n");
+printf("*  *\n");
+printf("****\n");
+}
+int main(){
+display_square();
+display_square();
+display_square();
+return 0;
+}
+*/
+/*------------------------------------------------------*/
+/*
+int main(){
+
+int i=1;
+
+//temp++;
+i++;
+
+printf("%d\n",i);
+printf("%d\n",i++);
+printf("%d\n",++i);
+i++;
+printf("%d\n",i);
+++i;
+printf("%d\n",++i);
+return 0;
+}
+*/
+/*--------------------------------------------------------*/
+/*
+int main(){
+    char grade;
+    int thes;
+printf("Do u want to insert grade? yes-1 or no-0\n");
+scanf("%d",&thes);
+while (thes==1){
+    printf("Gimme ur grade (A/B/C/D/F): ");
+    scanf(" %c",&grade);
+    switch(grade){
+
+    case 'A':
+        printf("Excellent\n");
+        break;
+    case 'B':
+        printf("Well done\n");
+        break;
+    case 'C':
+        printf("Well done\n");
+        break;
+    case 'D':
+        printf("You passed\n");
+        break;
+    case 'F':
+        printf("Better try again\n");
+        break;
+    default:
+        printf("Invalid grade\n");
+                }
+printf("Do u want to insert grade? yes-1 or no-0\n");
+scanf("%d",&thes);
+             }
+printf("Ur last grade is %c \n",grade);
+          }
+*/
+/*---------------------------------------------------------*/
+/*
+int main() {
+int a = 1, b = 0;
+if (a==1 || ++b ==1) {
+printf("hello\n");
+}
+printf("value of b after if: %d\n", b);
+return 0;
+}
+*/
+/*-------------------------------------------------------*/
+
+/*void foo(void);
+void foo2(void);
+
+int main(){
+
+foo();
+foo2();
+
+return 0;
+          }
+
+void foo(void){
+int x,y;
+char z;
+printf("Address of int x (foo): %lld\n",&x); //h entoli %lld briskei thesi sti mnimi tou integer
+printf("Address of int y (foo): %lld\n",&y);
+printf("Address of char z (foo): %lld\n",&z);
+}
+
+void foo2(void){
+int x,y;
+char z;
+printf("Address of int x (foo2): %lld\n",&x);
+printf("Address of int y (foo2): %lld\n",&y);
+printf("Address of char z (foo2): %lld\n",&z);
+}
+*/
+/*------------------------------------------------*/
+/*
+void read_print_char(void);
+void read_print_int(void);
+void read_print_float(void);
+
+int main(){
+read_print_char();
+read_print_int();
+//read_print_float();
+return 0;
+}
+
+void read_print_char(void){
+char ch;
+printf("Please enter a character: ");
+scanf("%c",&ch);
+printf("The value is: %c and the allocated bytes are %lu\n",ch,(unsigned long)sizeof ch);
+}
+void read_print_int(void){
+char k;
+printf("Please enter an integer: ");
+scanf("%d",&k);
+printf("The value is: %d and the allocated bytes are %lu\n",k,(unsigned long)sizeof k);
+
+void read_print_float(void){
+float flo;
+printf("Please enter a float: ");
+scanf("%f",&flo);
+printf("The value is: %f and the allocated bytes are %lu\n",fl,(unsigned long)sizeof flo);
+}
+
+return;
+}
+
+/*---------------------------------------------------*/
+/*
+int main(){
+short int a;
+printf("%llu\n",sizeof(a));
+return 0;
+}
+/*----------------------------------------------------*/
+/*ypologismos athroismatos 5 mh arnitikwn arithmwn*/
+/*
+int main(){
+int a, i, sum=0;
+for (i=0; i<=5; i++){
+    printf("Enter a number: \n");
+    scanf("%d", &a);
+    if (a<0){ break;}
+    else
+    sum=sum+a;
+    printf("Sum is: %d\n", sum);
+
+}
+}
+*/
+/*
+int main(){
+    int a, i, sum=0;
+    for (i=0; i<=5; i++){
+
+        printf("Please enter an integer: \n");
+        scanf("%d", &a);
+
+        if (a<0){
+            continue;}
+        sum=sum+a;
+        printf("Sum is: %d\n", sum);
+
+}
+
+
+}
+*/
+/*------------------------------------------------------------*/
+/*
 /*pyramid*/
 /*
 int main()
@@ -14,7 +224,6 @@ int main()
         for (symbol=1; symbol<=((2*row)-1); symbol++){
         printf("*");
         }
-
     printf("\n");
     }
     return 0;
@@ -29,14 +238,12 @@ int main(void){
     dimension=get_dimension();
     print_rect(dimension);
     }
-
 int get_dimension(void){
     int dimension;
     printf("\n Please enter the dimension: ");
     scanf("%d",&dimension);
     return dimension;
 }
-
 void print_rect(int dimension){
     int x,y;
     for (y=0; y<dimension; y++){
@@ -56,27 +263,23 @@ int get_dimension(void);
 void print_rect(int);
 int is_perimeter(int, int, int);
 int is_rectangular(int, int);
-
 int main(void){
     int dimension;
     dimension=get_dimension();
     print_rect(dimension);
     return 0;
     }
-
 int get_dimension(void){
     int dimension;
     printf("\n Please enter the dimension: ");
     scanf("%d",&dimension);
     return dimension;
 }
-
 void print_rect(int dimension){
     int x,y;
     for (y=1; y<=dimension; y++){
         printf("\n");
         for (x=1; x<=dimension; x++){
-
             if ((is_perimeter(x, y, dimension))==1||(is_diagonal(x, y))==1)
                 printf("+");
                 else printf("*");
@@ -84,12 +287,10 @@ void print_rect(int dimension){
     }
 return;
 }
-
 int is_perimeter(int x, int y, int dimension){
     if (x==1||x==(dimension)||y==1||y==(dimension))
         return 1;
         else return 0;}
-
 int is_diagonal(int x, int y, int dimension){
         if (x==y||x==(dimension-y))
             return 1;
@@ -101,23 +302,18 @@ int is_diagonal(int x, int y, int dimension){
 /*
 int get_total_row_number(void);
 void print_orthogonal_triangle(int);
-
 int main(){
-
 int row, symbol, space, totalRowNumber;
-
 totalRowNumber=get_total_row_number();
 print_orthogonal_triangle(totalRowNumber);
 return 0;
 }
-
 int get_total_row_number(){
     int totalRowNumber;
     printf("\nPlease enter the total number of rows: \n");
     scanf("%d",&totalRowNumber);
     return totalRowNumber;
 }
-
 void print_orthogonal_triangle(int totalRowNumber){
     int symbol, space, row;
     for (row=1; row<=totalRowNumber; row++){
@@ -134,23 +330,18 @@ void print_orthogonal_triangle(int totalRowNumber){
 /*
 int get_total_row_number(void);
 void print_orthogonal_triangle(int);
-
 int main(){
-
 int row, symbol, space, totalRowNumber;
-
 totalRowNumber=get_total_row_number();
 print_orthogonal_triangle(totalRowNumber);
 return 0;
 }
-
 int get_total_row_number(){
     int totalRowNumber;
     printf("\nPlease enter the total number of rows: \n");
     scanf("%d",&totalRowNumber);
     return totalRowNumber;
 }
-
 void print_orthogonal_triangle(int totalRowNumber){
     int symbol, space, row;
     for (row=1; row<=totalRowNumber; row++){
@@ -172,12 +363,10 @@ int main()
     for (row=1; row<=totalRowNo; row++){
         for (space=1; space<=row-1; space++){
             printf(" ");
-
         }
     for (symbol=1; symbol<=(2*totalRowNo)-((2*row)-1); symbol++){
         printf("*");
                     }
-
     printf("\n");
     }
     return 0;
@@ -203,7 +392,6 @@ int main()
     for (row=(totalRowNo+1)/2; row<=totalRowNo; row++){
         for (space=1; space<=row-1; space++){
             printf(" ");
-
         }
     for (symbol=1; symbol<=(2*totalRowNo)-((2*row)-1); symbol++){
         printf("*");
@@ -219,12 +407,9 @@ int main()
 /*
 int main()
 {
-
     int totalRowNo,i,j,space;
-
     printf("Enter the total number of rows you wish: \n");
     scanf("%d",&totalRowNo);
-
     for (i=1; i<=totalRowNo; i++)
     {
         for (space=1; space<=totalRowNo-i; space++)
@@ -274,7 +459,6 @@ int main(){
     int i;
     float marks[5];
     float sum=0, average;
-
     for (i=0; i<5; i++){
         printf("Give me the mark: \n");
         scanf("%f",&marks[i]);
@@ -283,7 +467,6 @@ int main(){
         sum=sum+marks[i];
     }
 average=sum/5;
-
 printf("Sum is: %f\n",sum);
 printf("Average is: %f\n",average);
 }
@@ -301,7 +484,6 @@ int main(){
         if (a[i]%2==0)
             even++;
         else odd++;
-
     }
 printf("Even elements are: %d\n", even);
 printf("Odd elements are: %d\n", odd);
@@ -328,13 +510,53 @@ int main(){
 */
 /*---------------------------------------------------------*/
 /*2D arrays practicing*/
+/*
 int main(){
-    /*int marks[2][3]={{0,0,0},{1,1,1}};/*first is row size and second is column size*/
-    int a[2][3];
+    int i, j, sum=0, a[2][3];
     for (i=0; i<2; i++){
-        for (j=0; j<3, j++){
-            printf("Give next right element: \n");
+        for (j=0; j<3; j++){
+            printf("Give next right element of matrix: \n");
             scanf("%d", &a[i][j]);
         }
     }
+    printf("Matrix is: \n");
+    for (i=0; i<2; i++){
+        for (j=0; j<3; j++){
+            printf("%d\t",a[i][j]);
+            sum=sum+a[i][j];
+        }
+    printf("\n");
+    }
+    printf("Sum of all elements given in the matrix is: %d\n",sum);
+}
+*/
+/*--------------------------------------------------*/
+/*
+int main(){
+    int marks[2][3]={{11,22,33},{44,55,66}};
+    printf("%d",marks[1][1]);
+}
+*/
+/*print transpose of a matrix*/
+
+int main(){
+    int i, j, sum=0, a[2][3];
+    for (i=0; i<2; i++){
+        for (j=0; j<3; j++){
+            printf("Give next right element of matrix: \n");
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("Matrix is: \n");
+    for (i=0; i<2; i++){
+        for (j=0; j<3; j++){
+            printf("%d\t",a[i][j]);}
+    for (i=0; i<3; i++){
+        for (j=0; j<2; j++){
+            printf("%d\t",a[j][i]);
+        }
+        printf("\n");
+    }
+
+}
 }
